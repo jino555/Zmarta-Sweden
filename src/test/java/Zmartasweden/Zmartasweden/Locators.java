@@ -94,7 +94,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("390619-6369");
+		driver.findElement(ssn).sendKeys("830902-7285");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -150,9 +150,9 @@ public class Locators {
 			
 		}
 		
-		
-		driver.findElement(next2).click();
 		}
+		driver.findElement(next2).click();
+		
 	}
 	
 	
