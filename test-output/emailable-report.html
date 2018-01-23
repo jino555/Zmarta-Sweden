@@ -9,11 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">57,414</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">67,834</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m0">VerfiyBuildingTasks</a></td><td rowspan="1">1516681553163</td><td rowspan="1">5052</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m1">VerifyLoan</a></td><td rowspan="1">1516681558227</td><td rowspan="1">12983</td></tr><tr class="passedeven"><td><a href="#m2">VerifyPersonalInfo</a></td><td rowspan="1">1516681571213</td><td rowspan="1">13768</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m0">VerifyBuildingTasks</a></td><td rowspan="1">1516702218161</td><td rowspan="1">5074</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m1">VerifyLoan</a></td><td rowspan="1">1516702223249</td><td rowspan="1">15703</td></tr><tr class="passedeven"><td><a href="#m2">VerifyPersonalInfo</a></td><td rowspan="1">1516702238954</td><td rowspan="1">17575</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Zmartasweden.Zmartasweden.Zmarta_se#VerfiyBuildingTasks</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;application&quot;]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label&quot;}
+<h2>Default test</h2><h3 id="m0">Zmartasweden.Zmartasweden.Zmarta_se#VerifyBuildingTasks</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;application&quot;]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label&quot;}
   (Session info: chrome=63.0.3239.132)
   (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -22,7 +22,7 @@ Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: 
 System info: host: &apos;LAPTOP-L45CF4AI&apos;, ip: &apos;172.16.16.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Jino\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
-Session ID: 88a3a2ac42c783fca86d792574af2b25
+Session ID: fbd32c8457b0866466a72d1689898af8
 *** Element info: {Using=xpath, value=//*[@id=&quot;application&quot;]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -40,8 +40,8 @@ Session ID: 88a3a2ac42c783fca86d792574af2b25
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at Zmartasweden.Zmartasweden.Locators.BuildingTasks(Locators.java:113)
-	at Zmartasweden.Zmartasweden.Zmarta_se.VerfiyBuildingTasks(Zmarta_se.java:76)
+	at Zmartasweden.Zmartasweden.Locators.BuildingTasks(Locators.java:147)
+	at Zmartasweden.Zmartasweden.Zmarta_se.VerifyBuildingTasks(Zmarta_se.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

@@ -68,12 +68,12 @@ private WebDriver driver;
   
   
   @Test 
-  public void VerfiyBuildingTasks() throws InterruptedException
+  public void VerifyBuildingTasks() throws InterruptedException
   
   {
   
-	  Locators building = new Locators (driver);
-	  building.BuildingTasks();
+	  Locators build = new Locators (driver);
+	  build.BuildingTasks();
 	  
 	  
 	  

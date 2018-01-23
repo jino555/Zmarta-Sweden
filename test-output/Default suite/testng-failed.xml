@@ -5,8 +5,8 @@
     <classes>
       <class name="Zmartasweden.Zmartasweden.Zmarta_se">
         <methods>
+          <include name="VerifyBuildingTasks"/>
           <include name="beforeTest"/>
-          <include name="VerfiyBuildingTasks"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- Zmartasweden.Zmartasweden.Zmarta_se -->
