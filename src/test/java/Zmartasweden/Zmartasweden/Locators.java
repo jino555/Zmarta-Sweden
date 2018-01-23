@@ -38,7 +38,7 @@ public class Locators {
 	By coemail =By.name("Coemail");
 	By comob =By.name("CotelNr");
 	By approve = By.xpath("//div[@id='approveTermsStep1']/div/label/span");
-	By nexttab = By.xpath("//form[@id='application']/div[6]/div/div[2]/button[2]");
+	By next1 = By.xpath("//form[@id='application']/div[6]/div/div[2]/button[2]");
 	By close = By.xpath("//div[@id='msg']/div/a");
 	
 	// Building Tasks
@@ -51,8 +51,12 @@ public class Locators {
 	By mortgageyes =By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[3]/div[5]/div/div/div[1]/label");
 	By mortgagerent =By.name("mortgageMonthly");
 	By mortgageno = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[3]/div[5]/div/div/div[2]/label");
-	
-	
+	By coapplicantlivingno = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[2]/label");
+	By comarital =By.name("ComaritalStatus");
+	By cochildren =By.name("ConrOfChildren");
+	By coresidence =By.name("CoresidenceType");
+	By corent =By.name("Corent");
+	By next2 = By.xpath("//button[@type='button']");
 	
 	
 	 
@@ -90,7 +94,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("670909-0507");
+		driver.findElement(ssn).sendKeys("390619-6369");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -102,7 +106,7 @@ public class Locators {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)", "");
 		driver.findElement(approve).click();
-		driver.findElement(nexttab).click();
+		driver.findElement(next1).click();
 		Thread.sleep(3000);
 		driver.findElement(close).click();
 		Thread.sleep(5000);
@@ -116,7 +120,7 @@ public class Locators {
 		
 		
 		
-		for (int i=1;i<=1;i++) {
+		for (int i=1;i<=3;i++) {
 			
 		if (i==1)
 				
@@ -128,13 +132,30 @@ public class Locators {
 		
 			
 		}
-		if (i==2){
+		 if (i==2)
+		
+		{
 				 Thread.sleep(3000);
 				 driver.findElement(mortgageno).click();
 		}
 		
+		if (i==3) {
+			
+			driver.findElement(coapplicantlivingno).click();
+			new Select(driver.findElement(comarital)).selectByVisibleText("Sambo");
+			new Select(driver.findElement(cochildren)).selectByVisibleText("2");
+			new Select(driver.findElement(coresidence)).selectByVisibleText("Inneboende");
+			driver.findElement(corent).sendKeys("4500");
+			
+			
+		}
+		
+		
+		driver.findElement(next2).click();
 		}
 	}
+	
+	
 	
 	// Building Tasks
 	
