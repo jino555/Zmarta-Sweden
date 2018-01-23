@@ -51,11 +51,34 @@ private WebDriver driver;
 
   
   @Test
-  public void VerifyLoan() {
+  public void VerifyLoan() throws InterruptedException {
 	  
 	  Locators loan = new Locators(driver);
 	  loan.ApplyLoan();
   }
+  
+  
+  @Test
+  public void VerifyPersonalInfo() throws InterruptedException
+  {
+	  
+	  Locators info = new Locators(driver);
+	  info.PersonalInfo();
+  }
+  
+  
+  @Test 
+  public void VerfiyBuildingTasks() throws InterruptedException
+  
+  {
+  
+	  Locators building = new Locators (driver);
+	  building.BuildingTasks();
+	  
+	  
+	  
+  }
+  
   
   
   @AfterTest
