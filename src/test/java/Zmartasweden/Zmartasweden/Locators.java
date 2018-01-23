@@ -41,7 +41,7 @@ public class Locators {
 	
 	// Building Tasks
 	By coapplicantliving = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label");
-	By maritalstatus = By.xpath("maritalStatus");
+	By maritalstatus = By.xpath("//div[3]/div/div/div/select");
 	
 	
 	
@@ -81,7 +81,7 @@ public class Locators {
 	public void PersonalInfo() throws InterruptedException
 	
 	{
-		driver.findElement(ssn).sendKeys("401225-6535 ");
+		driver.findElement(ssn).sendKeys("951128-7717 ");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		driver.findElement(add).click();
@@ -95,9 +95,9 @@ public class Locators {
 		driver.findElement(nexttab).click();
 		Thread.sleep(3000);
 		driver.findElement(close).click();
-		 Thread.sleep(5000);
-		driver.findElement(coapplicantliving).click();
-		new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
+		//Thread.sleep(5000);
+		//driver.findElement(coapplicantliving).click();
+		//new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
 				 
 		 
 
