@@ -43,7 +43,7 @@ public class Locators {
 	
 	// Building Tasks
 	
-	By coapplicantliving = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label");
+	By coapplicantlivingyes = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label");
 	By maritalstatus = By.xpath("//div[3]/div/div/div/select");
 	By children = By.name("nrOfChildren");
 	By residence =By.name("residenceType");
@@ -57,6 +57,17 @@ public class Locators {
 	By coresidence =By.name("CoresidenceType");
 	By corent =By.name("Corent");
 	By next2 = By.xpath("//button[@type='button']");
+	
+	
+	// Employment
+	
+	By employment = By.name("employmentType");
+	By monthlyincome =By.name("monthlyIncome");
+	By company =By.name("companyName");
+	By yearsince =By.name("years");
+	By monthsince =By.xpath("(//select[@name='years'])[2]");
+	
+	
 	
 	
 	 
@@ -94,7 +105,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("830902-7285");
+		driver.findElement(ssn).sendKeys("660414-0845");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -109,10 +120,21 @@ public class Locators {
 		driver.findElement(next1).click();
 		Thread.sleep(3000);
 		driver.findElement(close).click();
-		Thread.sleep(5000);
+		driver.findElement(coapplicantlivingyes).click();
 		
 		
-		driver.findElement(coapplicantliving).click();
+	}
+	
+	
+	
+	// Building Tasks
+	
+	public void PersonalInfo1() throws InterruptedException
+	
+	 
+	 {  
+		
+		
 		new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
 		new Select(driver.findElement(children)).selectByVisibleText("0");
 		new Select(driver.findElement(residence)).selectByVisibleText("Bostadsrätt");
@@ -151,32 +173,30 @@ public class Locators {
 		}
 		
 		}
-		driver.findElement(next2).click();
 		
-	}
-	
-	
-	
-	// Building Tasks
-	
-	public void BuildingTasks() throws InterruptedException
-	
-	 
-	 {
-		 
-    Thread.sleep(5000);
-	driver.findElement(coapplicantliving).click();
-	new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
-	new Select(driver.findElement(children)).selectByVisibleText("0");
-	new Select(driver.findElement(residence)).selectByVisibleText("Bostadsrätt");
-	driver.findElement(rent).sendKeys("2500");
-    driver.findElement(mortgageyes).click();
-    driver.findElement(mortgagerent).sendKeys("2000");
+		driver.findElement(next2).click();
+    
 		 
 		 
 		
 	 }
 	
+	
+	
+	
+	// Employment
+	
+	 public void EmploymentInfo()
+	 
+	 
+	 {
+		new Select(driver.findElement(employment)).selectByVisibleText("Fast anställd");
+		 
+		 
+		 
+		 
+		 
+	 }
 	
 	
 }

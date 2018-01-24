@@ -34,7 +34,7 @@ import org.testng.annotations.AfterTest;
 public class Zmarta_se {
 	
 	
-private WebDriver driver;
+public WebDriver driver;
 
 
 
@@ -51,7 +51,9 @@ private WebDriver driver;
 
   
   @Test
-  public void VerifyLoan() throws InterruptedException {
+  public void VerifyLoan() throws InterruptedException
+  
+  {
 	  
 	  Locators loan = new Locators(driver);
 	  loan.ApplyLoan();
@@ -67,22 +69,48 @@ private WebDriver driver;
   }
   
   
-  @Test 
+  @Test
+  public void VerifyPersonalInfo1() throws InterruptedException
+  {
+	  
+	  Locators info1 = new Locators(driver);
+	  info1.PersonalInfo1();
+  }
+ 
+  
+  
+  
+  /*@Test 
   public void VerifyBuildingTasks() throws InterruptedException
   
   {
   
-	  Locators build = new Locators (driver);
-	  build.BuildingTasks();
+	  Locators task = new Locators(driver);
+	  task.Tasks();
 	  
 	  
 	  
   }
   
   
+ */
+  
+  
+ @Test
+ public void VerifyEmployment()
+ {
+	 Locators employment = new Locators(driver);
+	 employment.EmploymentInfo();
+	 
+ }
+ 
+ 
+ 
   
   @AfterTest
   public void afterTest() {
+	  
+	  
   }
 
 }
