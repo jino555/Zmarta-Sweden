@@ -190,7 +190,7 @@ public class Locators {
 	 
 	 
 	 {
-		new Select(driver.findElement(employment)).selectByVisibleText("Fast anställd");
+		//new Select(driver.findElement(employment)).selectByVisibleText("Fast anställd");
 		 
 		 
 		 
