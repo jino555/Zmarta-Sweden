@@ -62,15 +62,18 @@ public class Locators {
 	// Employment
 	
 	By employment = By.name("employmentType");
-	By employment1 = By.name("employmentType");
 	By monthlyincome =By.name("monthlyIncome");
 	By company =By.name("companyName");
 	By yearsince =By.name("years");
 	By monthsince =By.xpath("(//select[@name='years'])[2]");
-	By pep =By.xpath("//*[@id=\"application\"]/div[4]/div/div/div/div[2]/div/div[4]/div/div/div[1]/label");
+	By pepyes =By.xpath("//*[@id=\"application\"]/div[4]/div/div/div/div[2]/div/div[4]/div/div/div[1]/label");
 	By yearto =By.xpath("(//select[@name='years'])[3]");
 	By monthto =By.xpath("(//select[@name='years'])[4]");
-	
+	By popupclose =By.xpath("//div[4]/div[2]/a/i");
+	By pepno= By.xpath("//*[@id=\"application\"]/div[4]/div/div/div/div[2]/div/div[4]/div/div/div[2]/label");
+	By coemployment = By.name("CoemploymentType");
+	By Cocompany =By.name("CocompanyName");
+	By comonthlyincome =By.name("ComonthlyIncome");
 	
 	
 	
@@ -109,7 +112,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("820216-9200");
+		driver.findElement(ssn).sendKeys("820605-4689 ");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -173,27 +176,22 @@ public class Locators {
 			new Select(driver.findElement(coresidence)).selectByVisibleText("Inneboende");
 			driver.findElement(corent).sendKeys("4500");
 			
-			
-		}
+				}
 		
 		}
 		
 		driver.findElement(next2).click();
 		
-  
-		
-	 }
+  	 }
 	
 	
-	
-	
-	// Employment
+// Employment
 	
 	 public void EmploymentInfo() throws InterruptedException
 	 
 	 
 	 {
-		for (int i=1;i<=2;i++)
+		for (int i=1;i<=3;i++)
 			
 		{
 			
@@ -208,25 +206,42 @@ public class Locators {
 		new Select(driver.findElement(monthsince)).selectByVisibleText("Februari");
 		Thread.sleep(5000);
 		
-		
-	
-		
 		}
 			
 		if(i==2)
 			
 		{
 			new Select(driver.findElement(employment)).selectByVisibleText("Projektanställd");
-			
-			new Select(driver.findElement(yearto)).selectByVisibleText("2022");
+		    new Select(driver.findElement(yearto)).selectByVisibleText("2022");
 			new Select(driver.findElement(monthto)).selectByVisibleText("Juli");
-			driver.findElement(pep).click();
-		
-		
-		
-		
-		
+			driver.findElement(pepyes).click();
+			
 		} 
+		
+		if(i==3)
+		{
+			new Select(driver.findElement(employment)).selectByVisibleText("Annat");
+			Thread.sleep(5000);
+			driver.findElement(pepno).click();
+			driver.findElement(popupclose).click();
+			Thread.sleep(5000);
+			new Select(driver.findElement(employment)).selectByVisibleText("Studerande");
+			new Select(driver.findElement(yearsince)).selectByVisibleText("2014");
+			new Select(driver.findElement(monthsince)).selectByVisibleText("Maj");
+			new Select(driver.findElement(coemployment)).selectByVisibleText("Fast anställd");
+			driver.findElement(comonthlyincome).sendKeys("2222");
+			driver.findElement(Cocompany).sendKeys("Freedom Pvt Ltd");
+			new Select(driver.findElement(yearto)).selectByVisibleText("1995");
+			new Select(driver.findElement(monthto)).selectByVisibleText("Oktober");
+			Thread.sleep(5000);
+			driver.findElement(pepyes).click();
+		    driver.findElement(next2).click();
+			
+				}
+		
+		
+		
+		
 		 
 	 }
 	
