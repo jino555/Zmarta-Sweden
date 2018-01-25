@@ -74,35 +74,21 @@ public WebDriver driver;
   {
 	  
 	  Locators info1 = new Locators(driver);
-	  info1.PersonalInfo1();
+	  info1.Maritalstatus();
   }
  
   
   
-  
-  /*@Test 
-  public void VerifyBuildingTasks() throws InterruptedException
-  
-  {
-  
-	  Locators task = new Locators(driver);
-	  task.Tasks();
-	  
-	  
-	  
-  }
-  
-  
- */
-  
-  
+
  @Test
- public void VerifyEmployment()
+ public void VerifyPersonalInfo2() throws InterruptedException
  {
 	 Locators employment = new Locators(driver);
 	 employment.EmploymentInfo();
 	 
  }
+ 
+ 
  
  
  

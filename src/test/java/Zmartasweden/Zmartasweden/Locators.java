@@ -62,10 +62,14 @@ public class Locators {
 	// Employment
 	
 	By employment = By.name("employmentType");
+	By employment1 = By.name("employmentType");
 	By monthlyincome =By.name("monthlyIncome");
 	By company =By.name("companyName");
 	By yearsince =By.name("years");
 	By monthsince =By.xpath("(//select[@name='years'])[2]");
+	By pep =By.xpath("//*[@id=\"application\"]/div[4]/div/div/div/div[2]/div/div[4]/div/div/div[1]/label");
+	By yearto =By.xpath("(//select[@name='years'])[3]");
+	By monthto =By.xpath("(//select[@name='years'])[4]");
 	
 	
 	
@@ -105,7 +109,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("660414-0845");
+		driver.findElement(ssn).sendKeys("820216-9200");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -120,7 +124,7 @@ public class Locators {
 		driver.findElement(next1).click();
 		Thread.sleep(3000);
 		driver.findElement(close).click();
-		driver.findElement(coapplicantlivingyes).click();
+		
 		
 		
 	}
@@ -129,12 +133,12 @@ public class Locators {
 	
 	// Building Tasks
 	
-	public void PersonalInfo1() throws InterruptedException
+	public void Maritalstatus() throws InterruptedException
 	
 	 
 	 {  
 		
-		
+		//driver.findElement(coapplicantlivingyes).click();
 		new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
 		new Select(driver.findElement(children)).selectByVisibleText("0");
 		new Select(driver.findElement(residence)).selectByVisibleText("Bostadsrätt");
@@ -175,9 +179,8 @@ public class Locators {
 		}
 		
 		driver.findElement(next2).click();
-    
-		 
-		 
+		
+  
 		
 	 }
 	
@@ -186,17 +189,49 @@ public class Locators {
 	
 	// Employment
 	
-	 public void EmploymentInfo()
+	 public void EmploymentInfo() throws InterruptedException
 	 
 	 
 	 {
-		//new Select(driver.findElement(employment)).selectByVisibleText("Fast anställd");
-		 
-		 
-		 
-		 
+		for (int i=1;i<=2;i++)
+			
+		{
+			
+		if (i==1)
+			
+		{
+		new Select(driver.findElement(employment)).selectByVisibleText("Fast anställd");
+		driver.findElement(monthlyincome).sendKeys("3000");
+		Thread.sleep(5000);
+		driver.findElement(company).sendKeys("HHM Pvt Ltd");
+		new Select(driver.findElement(yearsince)).selectByVisibleText("1995");
+		new Select(driver.findElement(monthsince)).selectByVisibleText("Februari");
+		Thread.sleep(5000);
+		
+		
+	
+		
+		}
+			
+		if(i==2)
+			
+		{
+			new Select(driver.findElement(employment)).selectByVisibleText("Projektanställd");
+			
+			new Select(driver.findElement(yearto)).selectByVisibleText("2022");
+			new Select(driver.findElement(monthto)).selectByVisibleText("Juli");
+			driver.findElement(pep).click();
+		
+		
+		
+		
+		
+		} 
 		 
 	 }
 	
-	
+	 }
+	 
+	 
+	 
 }
