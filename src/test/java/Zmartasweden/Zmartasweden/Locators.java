@@ -15,8 +15,6 @@ import org.openqa.selenium.support.ui.Select;
 public class Locators {
 	
 	WebDriver driver;
-	//private StringBuffer verificationErrors = new StringBuffer();
-	//public int Count = 0;
 	
 	//Loan
 	
@@ -43,7 +41,7 @@ public class Locators {
 	
 	// Building Tasks
 	
-	By coapplicantlivingyes = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label");
+	By coapplicantlivingyes = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[2]/label");
 	By maritalstatus = By.xpath("//div[3]/div/div/div/select");
 	By children = By.name("nrOfChildren");
 	By residence =By.name("residenceType");
@@ -75,7 +73,9 @@ public class Locators {
 	By Cocompany =By.name("CocompanyName");
 	By comonthlyincome =By.name("ComonthlyIncome");
 	
+	//FinalLoan
 	
+	By loanpurpose =By.name("loanPurpose");
 	
 	 
 	public Locators (WebDriver driver)
@@ -112,7 +112,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("820605-4689 ");
+		driver.findElement(ssn).sendKeys("680410-7297");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -140,8 +140,8 @@ public class Locators {
 	
 	 
 	 {  
-		
-		//driver.findElement(coapplicantlivingyes).click();
+		Thread.sleep(5000);
+		driver.findElement(coapplicantlivingyes).click();
 		new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
 		new Select(driver.findElement(children)).selectByVisibleText("0");
 		new Select(driver.findElement(residence)).selectByVisibleText("Bostadsrätt");
@@ -199,6 +199,7 @@ public class Locators {
 			
 		{
 		new Select(driver.findElement(employment)).selectByVisibleText("Fast anställd");
+		Thread.sleep(5000);
 		driver.findElement(monthlyincome).sendKeys("3000");
 		Thread.sleep(5000);
 		driver.findElement(company).sendKeys("HHM Pvt Ltd");
@@ -236,16 +237,24 @@ public class Locators {
 			Thread.sleep(5000);
 			driver.findElement(pepyes).click();
 		    driver.findElement(next2).click();
-			
+		   	
 				}
-		
-		
-		
-		
-		 
 	 }
 	
 	 }
+	 
+	 //Final Loan
+	 
+	 public void FinalLoan()
+	 {
+		 
+		 new Select(driver.findElement(loanpurpose)).selectByVisibleText("Körkort");
+		 
+		 
+	 }
+	 
+	 
+	 
 	 
 	 
 	 

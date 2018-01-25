@@ -89,6 +89,16 @@ public WebDriver driver;
  }
  
  
+ @Test
+ 
+ public void VerifyPersonalInfo3()
+ {
+	 
+	 Locators finalloan = new Locators(driver);
+	 finalloan.FinalLoan();
+	 
+ }
+ 
  
  
  
