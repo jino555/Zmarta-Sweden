@@ -91,7 +91,7 @@ public WebDriver driver;
  
  @Test
  
- public void VerifyPersonalInfo3()
+ public void VerifyPersonalInfo3() throws InterruptedException
  {
 	 
 	 Locators finalloan = new Locators(driver);

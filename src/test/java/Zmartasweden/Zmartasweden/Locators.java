@@ -1,4 +1,4 @@
-	/* Jino philip
+/* Jino philip
 	 * 
 	 * This Class is used for Storing all the Locators
 	 */
@@ -76,6 +76,14 @@ public class Locators {
 	//FinalLoan
 	
 	By loanpurpose =By.name("loanPurpose");
+	By Refinanceloanyes = By.xpath("//*[@id=\"application\"]/div[5]/div/div/div/div[2]/div/div[3]/div/div/div[1]/label");
+	By Refinancedebt= By.id("refinanceDebtAmount");
+	By Refinancemonthly =By.id("refinanceDebtMonthlyCost");
+	By Refinanceloanno =By.xpath("//*[@id=\"application\"]/div[5]/div/div/div/div[2]/div/div[3]/div[1]/div/div[2]/label/p");
+	By Otherloanyes =By.xpath("//*[@id=\"application\"]/div[5]/div/div/div/div[2]/div/div[4]/div[1]/div/div[1]/label");
+	By Otherdebt = By.xpath("//form[@id='application']/div[5]/div/div/div/div[2]/div/div[4]/div[2]/div/div/div/input");
+	By Othermonthly = By.xpath("//form[@id='application']/div[5]/div/div/div/div[2]/div/div[4]/div[2]/div/div[2]/div/input"); 
+	By Otherloanno= By.xpath("//*[@id=\"application\"]/div[5]/div/div/div/div[2]/div/div[4]/div[1]/div/div[2]/label");
 	
 	 
 	public Locators (WebDriver driver)
@@ -112,7 +120,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("680410-7297");
+		driver.findElement(ssn).sendKeys("490701-2795");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -161,7 +169,7 @@ public class Locators {
 		
 			
 		}
-		 if (i==2)
+		 if (i==4)
 		
 		{
 				 Thread.sleep(3000);
@@ -245,17 +253,44 @@ public class Locators {
 	 
 	 //Final Loan
 	 
-	 public void FinalLoan()
+	 public void FinalLoan() throws InterruptedException  {
+	
+		for (int i=0;i<=1;i++)
 	 {
 		 
 		 new Select(driver.findElement(loanpurpose)).selectByVisibleText("Körkort");
+		
+		
+		
+		 {
+		 
+		 if(i==0) {
+	     driver.findElement(Refinanceloanyes).click();
+		 driver.findElement(Refinancedebt).sendKeys("4444");
+		 driver.findElement(Refinancemonthly).sendKeys("2500");
+		 driver.findElement(Refinanceloanno).click();
+		
+		 }
+		
+		
+		 else if (i==1) {
+		 driver.findElement(Otherloanyes).click();
+		 Thread.sleep(5000);
+			driver.findElement(Otherdebt).sendKeys("5600");
+			driver.findElement(Othermonthly).sendKeys("3455");
+		 
+		 }
 		 
 		 
+		
+			driver.findElement(Otherloanno).click();
+		 
+		 
+}}
+}
 	 }
 	 
 	 
 	 
 	 
 	 
-	 
-}
