@@ -262,7 +262,7 @@ public class Locators {
 		
 		
 		
-		 {
+		 
 		 
 		 if(i==0) {
 	     driver.findElement(Refinanceloanyes).click();
@@ -276,18 +276,19 @@ public class Locators {
 		 else if (i==1) {
 		 driver.findElement(Otherloanyes).click();
 		 Thread.sleep(5000);
-			driver.findElement(Otherdebt).sendKeys("5600");
-			driver.findElement(Othermonthly).sendKeys("3455");
-		 
+		driver.findElement(Otherdebt).sendKeys("5600");
+		driver.findElement(Othermonthly).sendKeys("3455");
+		driver.findElement(Otherloanno).click();
 		 }
 		 
 		 
 		
-			driver.findElement(Otherloanno).click();
+			
 		 
 		 
-}}
 }
+		}
+
 	 }
 	 
 	 
