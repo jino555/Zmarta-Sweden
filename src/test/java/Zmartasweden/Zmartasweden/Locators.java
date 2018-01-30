@@ -142,7 +142,7 @@ public class Locators {
 	
 	
 	
-	// Marital status
+	// Marital Status
 	
 	public void Maritalstatus() throws InterruptedException
 	
