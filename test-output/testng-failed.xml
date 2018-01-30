@@ -5,7 +5,6 @@
     <classes>
       <class name="Zmartasweden.Zmartasweden.Zmarta_se">
         <methods>
-          <include name="VerifyPersonalInfo2"/>
           <include name="VerifyPersonalInfo3"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>

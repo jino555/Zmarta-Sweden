@@ -39,9 +39,9 @@ public class Locators {
 	By next1 = By.xpath("//form[@id='application']/div[6]/div/div[2]/button[2]");
 	By close = By.xpath("//div[@id='msg']/div/a");
 	
-	// Building Tasks
+	// Marital Status
 	
-	By coapplicantlivingyes = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[2]/label");
+	By coapplicantlivingyes = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label/p");
 	By maritalstatus = By.xpath("//div[3]/div/div/div/select");
 	By children = By.name("nrOfChildren");
 	By residence =By.name("residenceType");
@@ -120,7 +120,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("490701-2795");
+		driver.findElement(ssn).sendKeys("491006-6713");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -142,7 +142,7 @@ public class Locators {
 	
 	
 	
-	// Building Tasks
+	// Marital status
 	
 	public void Maritalstatus() throws InterruptedException
 	
@@ -169,14 +169,14 @@ public class Locators {
 		
 			
 		}
-		 if (i==4)
+		else if (i==2)
 		
 		{
 				 Thread.sleep(3000);
 				 driver.findElement(mortgageno).click();
 		}
 		
-		if (i==3) {
+		else {
 			
 			driver.findElement(coapplicantlivingno).click();
 			new Select(driver.findElement(comarital)).selectByVisibleText("Sambo");
@@ -199,7 +199,7 @@ public class Locators {
 	 
 	 
 	 {
-		for (int i=1;i<=3;i++)
+		for (int i=1;i<=4;i++)
 			
 		{
 			
@@ -234,6 +234,12 @@ public class Locators {
 			driver.findElement(pepno).click();
 			driver.findElement(popupclose).click();
 			Thread.sleep(5000);
+			
+		}
+		
+		
+		if(i==4) {	
+			
 			new Select(driver.findElement(employment)).selectByVisibleText("Studerande");
 			new Select(driver.findElement(yearsince)).selectByVisibleText("2014");
 			new Select(driver.findElement(monthsince)).selectByVisibleText("Maj");
@@ -245,11 +251,12 @@ public class Locators {
 			Thread.sleep(5000);
 			driver.findElement(pepyes).click();
 		    driver.findElement(next2).click();
+		}
 		   	
 				}
 	 }
 	
-	 }
+	 
 	 
 	 //Final Loan
 	 
@@ -265,6 +272,7 @@ public class Locators {
 		 
 		 
 		 if(i==0) {
+	      Thread.sleep(3000);
 	     driver.findElement(Refinanceloanyes).click();
 		 driver.findElement(Refinancedebt).sendKeys("4444");
 		 driver.findElement(Refinancemonthly).sendKeys("2500");

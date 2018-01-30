@@ -50,7 +50,7 @@ public WebDriver driver;
   }
 
   
-  @Test
+  @Test 
   public void VerifyLoan() throws InterruptedException
   
   {
@@ -60,7 +60,7 @@ public WebDriver driver;
   }
   
   
-  @Test
+  @Test 
   public void VerifyPersonalInfo() throws InterruptedException
   {
 	  
