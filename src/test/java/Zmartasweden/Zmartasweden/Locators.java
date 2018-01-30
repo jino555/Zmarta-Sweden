@@ -41,8 +41,9 @@ public class Locators {
 	
 	// Marital Status
 	
-	By coapplicantlivingyes = By.xpath("//*[@id=\"application\"]/div[3]/div/div/div/div[2]/div/div[2]/div/div/div[1]/label/p");
-	By maritalstatus = By.xpath("//div[3]/div/div/div/select");
+	By coapplicantlivingyes  =By.xpath("//*[@class='btn-common'] ");
+	By maritalstatus = By.xpath("//*[@name='maritalStatus']");
+	//By maritalstatus = By.xpath("//div[3]/div/div/div/select");
 	By children = By.name("nrOfChildren");
 	By residence =By.name("residenceType");
 	By rent =By.name("rent");
@@ -120,7 +121,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("491006-6713");
+		driver.findElement(ssn).sendKeys("590103-7225");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
