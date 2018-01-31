@@ -30,12 +30,12 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
-import org.openqa.selenium.NoSuchElementException;
+
 
 public class Zmarta_se {
 	
 	
-public static WebDriver driver;
+public static  WebDriver driver;
 
 
 

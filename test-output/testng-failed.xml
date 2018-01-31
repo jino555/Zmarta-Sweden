@@ -7,6 +7,8 @@
         <methods>
           <include name="VerifyPersonalInfo2"/>
           <include name="VerifyPersonalInfo3"/>
+          <include name="VerifyMaritalstatus"/>
+          <include name="VerifyPersonalInfo"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
         </methods>

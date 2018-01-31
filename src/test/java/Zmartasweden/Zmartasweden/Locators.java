@@ -1,6 +1,6 @@
 /* Jino philip
 	 * 
-	 * This Class is used for Storing all the Locators
+	 * This Class is used for Storing all the Locators and Methods of this Project
 	 */
 
 
@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 //import com.sun.org.apache.bcel.internal.generic.Select;
-import org.openqa.selenium.NoSuchElementException;
+
 
 public class Locators {
 	
@@ -99,7 +99,7 @@ public class Locators {
 	}
 	
 	
-	//Verify Page Ttile
+	//Verify Page Title
 	public void Pagetitle()
 	
 	{
