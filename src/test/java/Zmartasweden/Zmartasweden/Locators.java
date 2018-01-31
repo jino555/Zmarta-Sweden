@@ -10,7 +10,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 //import com.sun.org.apache.bcel.internal.generic.Select;
+import org.openqa.selenium.NoSuchElementException;
 
 public class Locators {
 	
@@ -97,11 +99,28 @@ public class Locators {
 	}
 	
 	
-	//Loan
-	
-	public void ApplyLoan() throws InterruptedException 
+	//Verify Page Ttile
+	public void Pagetitle()
 	
 	{
+		//Actual result
+		String  actual_title = driver.getTitle();
+	  System.out.println("Title is " +actual_title);
+	  
+	  //Expected result
+	  String expected_title= "Samla Lån och Krediter redan idag på Zmarta.se";
+	  Assert.assertEquals(   actual_title,   expected_title  );
+	  System.out.println("Page title Verfied");
+	  
+}
+
+	
+	//Loan
+	
+	public void ApplyLoan() throws InterruptedException
+	
+	{
+		
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
@@ -121,7 +140,7 @@ public class Locators {
 	
 	{
 		
-		driver.findElement(ssn).sendKeys("590103-7225");
+		driver.findElement(ssn).sendKeys(" 990113-9239 ");
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -145,16 +164,18 @@ public class Locators {
 	
 	// Marital Status
 	
-	public void Maritalstatus() throws InterruptedException
+	public void Maritalstatus() throws InterruptedException 
 	
-	 
+	
 	 {  
-		Thread.sleep(5000);
-		driver.findElement(coapplicantlivingyes).click();
-		new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
-		new Select(driver.findElement(children)).selectByVisibleText("0");
-		new Select(driver.findElement(residence)).selectByVisibleText("Bostadsrätt");
-		driver.findElement(rent).sendKeys("2500");
+	
+			Thread.sleep(5000);
+			driver.findElement(coapplicantlivingyes).click();
+			new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
+			new Select(driver.findElement(children)).selectByVisibleText("0");
+			new Select(driver.findElement(residence)).selectByVisibleText("Bostadsrätt");
+			driver.findElement(rent).sendKeys("2500");
+	 
 		
 		
 		
@@ -192,8 +213,10 @@ public class Locators {
 		driver.findElement(next2).click();
 		
   	 }
+		
 	
-	
+
+
 // Employment
 	
 	 public void EmploymentInfo() throws InterruptedException

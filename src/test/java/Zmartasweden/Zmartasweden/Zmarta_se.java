@@ -30,16 +30,17 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
+import org.openqa.selenium.NoSuchElementException;
 
 public class Zmarta_se {
 	
 	
-public WebDriver driver;
+public static WebDriver driver;
 
 
 
  @BeforeTest
-  public void beforeTest() {
+  public static void beforeTest() {
 	 
 	 System.setProperty("webdriver.chromedriver" ,"E://chromedriver.exe");
 	 driver = new ChromeDriver();
@@ -50,18 +51,30 @@ public WebDriver driver;
   }
 
   
+ @Test
+ 
+public static void VerifyPageTitle()
+{
+	  Locators title = new Locators(driver);
+	  title.Pagetitle();
+	 
+	 
+	}
+ 
+ 
   @Test 
-  public void VerifyLoan() throws InterruptedException
+  public static void VerifyLoan() throws InterruptedException {
   
-  {
-	  
-	  Locators loan = new Locators(driver);
-	  loan.ApplyLoan();
-  }
+ 
+		  Locators loan = new Locators(driver);
+		  loan.ApplyLoan();
+	  }
+
+ 
   
   
-  @Test 
-  public void VerifyPersonalInfo() throws InterruptedException
+  @Test
+  public static  void VerifyPersonalInfo() throws InterruptedException
   {
 	  
 	  Locators info = new Locators(driver);
@@ -70,7 +83,7 @@ public WebDriver driver;
   
   
   @Test
-  public void VerifyPersonalInfo1() throws InterruptedException
+  public static void VerifyMaritalstatus() throws InterruptedException
   {
 	  
 	  Locators info1 = new Locators(driver);
