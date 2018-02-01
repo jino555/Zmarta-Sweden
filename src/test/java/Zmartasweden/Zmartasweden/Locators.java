@@ -150,7 +150,7 @@ public class Locators {
 	{
 		//ReadExcel
 		Test_data read = new Test_data("Zmarta.xls", "Main Applicant");
-		driver.findElement(ssn).sendKeys(read.readData(0, 1));
+		driver.findElement(ssn).sendKeys(read.readData(1, 2));
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);

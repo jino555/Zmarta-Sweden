@@ -5,8 +5,6 @@
     <classes>
       <class name="Zmartasweden.Zmartasweden.Zmarta_se">
         <methods>
-          <include name="VerifyLoan"/>
-          <include name="VerifyPageTitle"/>
           <include name="VerifyPersonalInfo2"/>
           <include name="VerifyPersonalInfo3"/>
           <include name="VerifyMaritalstatus"/>
