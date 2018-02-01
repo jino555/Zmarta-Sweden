@@ -56,7 +56,8 @@ public static  WebDriver driver;
 	 driver.get(baseurl);
 	 driver.manage().window().maximize();
 	 
-  }
+  
+ }
 
   
  @Test
