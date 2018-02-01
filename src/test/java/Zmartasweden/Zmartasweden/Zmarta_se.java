@@ -26,7 +26,15 @@
  */package Zmartasweden.Zmartasweden;
 
 import org.testng.annotations.Test;
+import ReadExcel.Test_data;
+import jxl.read.biff.BiffException;
+
+
+
 import org.testng.annotations.BeforeTest;
+
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -63,9 +71,9 @@ public static void VerifyPageTitle()
  
  
   @Test 
-  public static void VerifyLoan() throws InterruptedException {
+  public static void VerifyLoan() throws InterruptedException, BiffException, IOException {
   
- 
+   	   
 		  Locators loan = new Locators(driver);
 		  loan.ApplyLoan();
 	  }
@@ -74,7 +82,7 @@ public static void VerifyPageTitle()
   
   
   @Test
-  public static  void VerifyPersonalInfo() throws InterruptedException
+  public static  void VerifyPersonalInfo() throws InterruptedException, BiffException, IOException
   {
 	  
 	  Locators info = new Locators(driver);
@@ -83,7 +91,7 @@ public static void VerifyPageTitle()
   
   
   @Test
-  public static void VerifyMaritalstatus() throws InterruptedException
+  public static void VerifyMaritalstatus() throws InterruptedException, BiffException, IOException
   {
 	  
 	  Locators info1 = new Locators(driver);

@@ -6,6 +6,8 @@
 
 package Zmartasweden.Zmartasweden;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,10 +15,15 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 //import com.sun.org.apache.bcel.internal.generic.Select;
 
+import ReadExcel.Test_data;
+
+import jxl.read.biff.BiffException;
+
 
 public class Locators {
 	
 	WebDriver driver;
+	 
 	
 	//Loan
 	
@@ -117,15 +124,17 @@ public class Locators {
 	
 	//Loan
 	
-	public void ApplyLoan() throws InterruptedException
+	public void ApplyLoan() throws InterruptedException, BiffException, IOException
 	
 	{
-		
+	
+		 //Reading Excel  
+		Test_data read=new Test_data("Zmarta.xls", "Main Applicant");    
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(3000);
-		driver.findElement(amount).sendKeys("15000");
+		driver.findElement(amount).sendKeys(read.readData(0,1)); 
 		Thread.sleep(3000);
 		new Select (driver.findElement(years)).selectByVisibleText("14 år");
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -136,11 +145,12 @@ public class Locators {
 	
 //Personal Information
 	
-	public void PersonalInfo() throws InterruptedException
+	public void PersonalInfo() throws InterruptedException, BiffException, IOException
 	
 	{
-		
-		driver.findElement(ssn).sendKeys(" 990113-9239 ");
+		//ReadExcel
+		Test_data read = new Test_data("Zmarta.xls", "Main Applicant");
+		driver.findElement(ssn).sendKeys(read.readData(0, 1));
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -164,11 +174,11 @@ public class Locators {
 	
 	// Marital Status
 	
-	public void Maritalstatus() throws InterruptedException 
+	public void Maritalstatus() throws InterruptedException, BiffException, IOException 
 	
 	
 	 {  
-	
+		Test_data read=new Test_data("Zmarta.xls", "Main Applicant");    
 			Thread.sleep(5000);
 			driver.findElement(coapplicantlivingyes).click();
 			new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
