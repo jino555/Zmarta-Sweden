@@ -27,6 +27,7 @@
 
 import org.testng.annotations.Test;
 import ReadExcel.Test_data;
+import ReadExcel.Excel_Data;
 import jxl.read.biff.BiffException;
 
 
@@ -72,7 +73,7 @@ public static void VerifyPageTitle()
  
  
   @Test 
-  public static void VerifyLoan() throws InterruptedException, BiffException, IOException {
+  public static void VerifyLoan() throws Exception {
   
    	   
 		  Locators loan = new Locators(driver);
@@ -83,7 +84,7 @@ public static void VerifyPageTitle()
   
   
   @Test
-  public static  void VerifyPersonalInfo() throws InterruptedException, BiffException, IOException
+  public static  void VerifyPersonalInfo() throws Exception
   {
 	  
 	  Locators info = new Locators(driver);

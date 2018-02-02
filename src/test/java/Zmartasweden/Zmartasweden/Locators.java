@@ -16,6 +16,7 @@ import org.testng.Assert;
 //import com.sun.org.apache.bcel.internal.generic.Select;
 
 import ReadExcel.Test_data;
+//import ReadExcel. Excel_Data;
 
 import jxl.read.biff.BiffException;
 
@@ -124,12 +125,12 @@ public class Locators {
 	
 	//Loan
 	
-	public void ApplyLoan() throws InterruptedException, BiffException, IOException
+	public void ApplyLoan() throws Exception
 	
 	{
 	
 		 //Reading Excel  
-		Test_data read=new Test_data("Zmarta.xls", "Main Applicant");    
+		Test_data read  = new Test_data("Zmarta.xls", "Main Applicant");    
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
@@ -145,12 +146,12 @@ public class Locators {
 	
 //Personal Information
 	
-	public void PersonalInfo() throws InterruptedException, BiffException, IOException
+	public void PersonalInfo() throws Exception
 	
 	{
 		//ReadExcel
-		Test_data read = new Test_data("Zmarta.xls", "Main Applicant");
-		driver.findElement(ssn).sendKeys(read.readData(1, 2));
+		Test_data  read = new  Test_data("Zmarta.xls", "Main Applicant");
+		driver.findElement(ssn).sendKeys(read.readData(1,1));
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
