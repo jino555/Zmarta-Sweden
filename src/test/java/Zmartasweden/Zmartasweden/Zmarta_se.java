@@ -26,8 +26,7 @@
  */package Zmartasweden.Zmartasweden;
 
 import org.testng.annotations.Test;
-import ReadExcel.Test_data;
-import ReadExcel.Excel_Data;
+
 import jxl.read.biff.BiffException;
 
 
@@ -56,12 +55,13 @@ public static  WebDriver driver;
 	 String baseurl = "https://test.zmarta.se/lana-pengar";
 	 driver.get(baseurl);
 	 driver.manage().window().maximize();
+	 System.out.print("Browser Started");
 	 
   
  }
 
   
- @Test
+ @Test(priority=0,description ="This Test is to Verify the Landing page of the Website r")
  
 public static void VerifyPageTitle()
 {
@@ -72,7 +72,7 @@ public static void VerifyPageTitle()
 	}
  
  
-  @Test 
+  @Test(priority=1,description = "  This Test  is to Verfiy the Applicant Loan ")
   public static void VerifyLoan() throws Exception {
   
    	   
@@ -83,7 +83,7 @@ public static void VerifyPageTitle()
  
   
   
-  @Test
+  @Test(priority=2,description =" This Test  is to Verify The Personal Info of the Applicant ")
   public static  void VerifyPersonalInfo() throws Exception
   {
 	  
@@ -92,8 +92,8 @@ public static void VerifyPageTitle()
   }
   
   
-  @Test
-  public static void VerifyMaritalstatus() throws InterruptedException, BiffException, IOException
+  @Test(priority=3,description = "  This Test verifies the Marital status of the  Applicant  ")
+  public static void 	VerifyMaritalstatus() throws InterruptedException, BiffException, IOException
   {
 	  
 	  Locators info1 = new Locators(driver);
@@ -103,8 +103,8 @@ public static void VerifyPageTitle()
   
   
 
- @Test
- public void VerifyPersonalInfo2() throws InterruptedException
+ @Test(priority=4,description ="This Test is to Verify the Applicant Employment Info")
+ public void VerifyEmploymentInfo() throws InterruptedException
  {
 	 Locators employment = new Locators(driver);
 	 employment.EmploymentInfo();
@@ -112,9 +112,9 @@ public static void VerifyPageTitle()
  }
  
  
- @Test
+ @Test(priority=5,description ="This Test  verfies the Applicant Final Loan Information")
  
- public void VerifyPersonalInfo3() throws InterruptedException
+ public void VerifyFinalLoan() throws InterruptedException
  {
 	 
 	 Locators finalloan = new Locators(driver);

@@ -15,8 +15,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 //import com.sun.org.apache.bcel.internal.generic.Select;
 
-import ReadExcel.Test_data;
-//import ReadExcel. Excel_Data;
+//import ReadExcel.Test_data;
+import ReadExcel. Excel_Data;
 
 import jxl.read.biff.BiffException;
 
@@ -116,9 +116,9 @@ public class Locators {
 	  System.out.println("Title is " +actual_title);
 	  
 	  //Expected result
-	  String expected_title= "Samla Lån och Krediter redan idag på Zmarta.se";
+	  String expected_title= "Låna pengar på nätet till låg ränta på Zmarta.se";
 	  Assert.assertEquals(   actual_title,   expected_title  );
-	  System.out.println("Page title Verfied");
+	  System.out.println("Page title Verfied and Welcome to Zmarta Landing Page ");
 	  
 }
 
@@ -130,17 +130,19 @@ public class Locators {
 	{
 	
 		 //Reading Excel  
-		Test_data read  = new Test_data("Zmarta.xls", "Main Applicant");    
+	//	Excel_Data read  = new Excel_Data();    
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(3000);
-		driver.findElement(amount).sendKeys(read.readData(0,1)); 
+		//driver.findElement(amount).sendKeys(read.readData(0, 1));
+		driver.findElement(amount).sendKeys("5000");
 		Thread.sleep(3000);
 		new Select (driver.findElement(years)).selectByVisibleText("14 år");
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)", "");
 		driver.findElement(next).click();
+		System.out.println("Applicant Loan is Verfiied" );
 	
 	}
 	
@@ -150,13 +152,14 @@ public class Locators {
 	
 	{
 		//ReadExcel
-		Test_data  read = new  Test_data("Zmarta.xls", "Main Applicant");
-		driver.findElement(ssn).sendKeys(read.readData(1,1));
+	//	Test_data  read = new    Test_data ("Zmarta.xls", "Main Applicant");
+		driver.findElement(ssn).sendKeys("410213-7785");
+		//driver.findElement(ssn).sendKeys(read.readData(1,1));
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
 		driver.findElement(add).click();
-		driver.findElement(cossn).sendKeys("961009-9914");
+		driver.findElement(cossn).sendKeys("590517-8710");
 		driver.findElement(coemail).sendKeys("qa1@gmail.com");
 		driver.findElement(comob).sendKeys("9747835332");
 		Thread.sleep(3000);
@@ -166,6 +169,7 @@ public class Locators {
 		driver.findElement(next1).click();
 		Thread.sleep(3000);
 		driver.findElement(close).click();
+		System.out.println("Applicant Personal Information is Verfied");
 		
 		
 		
@@ -179,13 +183,14 @@ public class Locators {
 	
 	
 	 {  
-		Test_data read=new Test_data("Zmarta.xls", "Main Applicant");    
+		    // Test_data read=new Test_data("Zmarta.xls", "Main Applicant");    
 			Thread.sleep(5000);
 			driver.findElement(coapplicantlivingyes).click();
 			new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
 			new Select(driver.findElement(children)).selectByVisibleText("0");
 			new Select(driver.findElement(residence)).selectByVisibleText("Bostadsrätt");
 			driver.findElement(rent).sendKeys("2500");
+			
 	 
 		
 		
@@ -222,6 +227,7 @@ public class Locators {
 		}
 		
 		driver.findElement(next2).click();
+		System.out.println("Applicant Marital Information  is Verfied");
 		
   	 }
 		
@@ -286,6 +292,7 @@ public class Locators {
 			Thread.sleep(5000);
 			driver.findElement(pepyes).click();
 		    driver.findElement(next2).click();
+		    System.out.println("Applicant Employment Information is Verified");
 		}
 		   	
 				}
@@ -322,6 +329,7 @@ public class Locators {
 		driver.findElement(Otherdebt).sendKeys("5600");
 		driver.findElement(Othermonthly).sendKeys("3455");
 		driver.findElement(Otherloanno).click();
+		System.out.println("Applicant Final Loan is Verfied");
 		 }
 		 
 		 
