@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="131816" started-at="2018-02-05T05:51:19Z" finished-at="2018-02-05T05:53:31Z">
+  <suite name="Default suite" duration-ms="116285" started-at="2018-02-05T06:07:26Z" finished-at="2018-02-05T06:09:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="131816" started-at="2018-02-05T05:51:19Z" finished-at="2018-02-05T05:53:31Z">
+    <test name="Default test" duration-ms="116285" started-at="2018-02-05T06:07:26Z" finished-at="2018-02-05T06:09:22Z">
       <class name="Zmartasweden.Zmartasweden.Zmarta_se">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="beforeTest" is-config="true" duration-ms="29872" started-at="2018-02-05T11:21:20Z" finished-at="2018-02-05T11:21:49Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="beforeTest" is-config="true" duration-ms="26564" started-at="2018-02-05T11:37:26Z" finished-at="2018-02-05T11:37:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifyPageTitle()[pri:0, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyPageTitle" duration-ms="79" started-at="2018-02-05T11:21:49Z" description="This Test is to Verify the Landing page of the Website r" finished-at="2018-02-05T11:21:49Z">
+        <test-method status="PASS" signature="VerifyPageTitle()[pri:0, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyPageTitle" duration-ms="25" started-at="2018-02-05T11:37:52Z" description="This Test is to Verify the Landing page of the Website" finished-at="2018-02-05T11:37:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyPageTitle -->
-        <test-method status="PASS" signature="VerifyLoan()[pri:1, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyLoan" duration-ms="17298" started-at="2018-02-05T11:21:49Z" description="  This Test  is to Verfiy the Applicant Loan " finished-at="2018-02-05T11:22:07Z">
+        <test-method status="PASS" signature="VerifyLoan()[pri:1, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyLoan" duration-ms="21035" started-at="2018-02-05T11:37:52Z" description="  This Test  is to Verify the Applicant Loan " finished-at="2018-02-05T11:38:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLoan -->
-        <test-method status="PASS" signature="VerifyPersonalInfo()[pri:2, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyPersonalInfo" duration-ms="27636" started-at="2018-02-05T11:22:07Z" description=" This Test  is to Verify The Personal Info of the Applicant " finished-at="2018-02-05T11:22:34Z">
+        <test-method status="PASS" signature="VerifyPersonalInfo()[pri:2, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyPersonalInfo" duration-ms="13056" started-at="2018-02-05T11:38:14Z" description=" This Test  is to Verify The Personal Info of the Applicant " finished-at="2018-02-05T11:38:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyPersonalInfo -->
-        <test-method status="PASS" signature="VerifyMaritalstatus()[pri:3, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyMaritalstatus" duration-ms="10745" started-at="2018-02-05T11:22:34Z" description="  This Test verifies the Marital status of the  Applicant  " finished-at="2018-02-05T11:22:45Z">
+        <test-method status="PASS" signature="VerifyMaritalstatus()[pri:3, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyMaritalstatus" duration-ms="10596" started-at="2018-02-05T11:38:27Z" description="  This Test verifies the Marital status of the  Applicant  " finished-at="2018-02-05T11:38:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyMaritalstatus -->
-        <test-method status="PASS" signature="VerifyEmploymentInfo()[pri:4, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyEmploymentInfo" duration-ms="35834" started-at="2018-02-05T11:22:45Z" description="This Test is to Verify the Applicant Employment Info" finished-at="2018-02-05T11:23:21Z">
+        <test-method status="PASS" signature="VerifyEmploymentInfo()[pri:4, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyEmploymentInfo" duration-ms="34845" started-at="2018-02-05T11:38:37Z" description="This Test is to Verify the Applicant Employment Info" finished-at="2018-02-05T11:39:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyEmploymentInfo -->
-        <test-method status="PASS" signature="VerifyFinalLoan()[pri:5, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyFinalLoan" duration-ms="10309" started-at="2018-02-05T11:23:21Z" description="This Test  verfies the Applicant Final Loan Information" finished-at="2018-02-05T11:23:31Z">
+        <test-method status="PASS" signature="VerifyFinalLoan()[pri:5, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="VerifyFinalLoan" duration-ms="10109" started-at="2018-02-05T11:39:12Z" description="This Test  verfies the Applicant Final Loan Information" finished-at="2018-02-05T11:39:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyFinalLoan -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-05T11:23:31Z" finished-at="2018-02-05T11:23:31Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-05T11:39:22Z" finished-at="2018-02-05T11:39:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

@@ -55,13 +55,13 @@ public static  WebDriver driver;
 	 String baseurl = "https://test.zmarta.se/lana-pengar";
 	 driver.get(baseurl);
 	 driver.manage().window().maximize();
-	 System.out.print("Browser Started");
+	 System.out.println("Browser Started");
 	 
   
  }
 
   
- @Test(priority=0,description ="This Test is to Verify the Landing page of the Website r")
+ @Test(priority=0,description ="This Test Case is to Verify the Landing page of the Website")
  
 public static void VerifyPageTitle()
 {
@@ -72,7 +72,7 @@ public static void VerifyPageTitle()
 	}
  
  
-  @Test(priority=1,description = "  This Test  is to Verfiy the Applicant Loan ")
+  @Test(priority=1,description = " This Test Case  is to Verify the Applicant Loan Information")
   public static void VerifyLoan() throws Exception {
   
    	   
@@ -83,7 +83,7 @@ public static void VerifyPageTitle()
  
   
   
-  @Test(priority=2,description =" This Test  is to Verify The Personal Info of the Applicant ")
+  @Test(priority=2,description =" This Test Case   is to Verify the Applicant Personal Information ")
   public static  void VerifyPersonalInfo() throws Exception
   {
 	  
@@ -92,7 +92,7 @@ public static void VerifyPageTitle()
   }
   
   
-  @Test(priority=3,description = "  This Test verifies the Marital status of the  Applicant  ")
+  @Test(priority=3,description = "  This Test Case is to Verify  the Applicant  Marital status ")
   public static void 	VerifyMaritalstatus() throws InterruptedException, BiffException, IOException
   {
 	  
@@ -103,7 +103,7 @@ public static void VerifyPageTitle()
   
   
 
- @Test(priority=4,description ="This Test is to Verify the Applicant Employment Info")
+ @Test(priority=4,description ="This Test Case is to Verify the Applicant Employment Information")
  public void VerifyEmploymentInfo() throws InterruptedException
  {
 	 Locators employment = new Locators(driver);
@@ -112,7 +112,7 @@ public static void VerifyPageTitle()
  }
  
  
- @Test(priority=5,description ="This Test  verfies the Applicant Final Loan Information")
+ @Test(priority=5,description ="This Test Case is to  Verify  the Applicant Final Loan Information")
  
  public void VerifyFinalLoan() throws InterruptedException
  {
@@ -129,7 +129,7 @@ public static void VerifyPageTitle()
   @AfterTest
   public void afterTest() {
 	  
-	  
+	System.out.println("Browser End");  
   }
 
 }

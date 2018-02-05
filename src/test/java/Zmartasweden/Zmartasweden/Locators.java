@@ -153,13 +153,13 @@ public class Locators {
 	{
 		//ReadExcel
 	//	Test_data  read = new    Test_data ("Zmarta.xls", "Main Applicant");
-		driver.findElement(ssn).sendKeys("410213-7785");
+		driver.findElement(ssn).sendKeys("620701-5469");
 		//driver.findElement(ssn).sendKeys(read.readData(1,1));
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
 		driver.findElement(add).click();
-		driver.findElement(cossn).sendKeys("590517-8710");
+		driver.findElement(cossn).sendKeys("450805-9534");
 		driver.findElement(coemail).sendKeys("qa1@gmail.com");
 		driver.findElement(comob).sendKeys("9747835332");
 		Thread.sleep(3000);
