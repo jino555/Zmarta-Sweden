@@ -4,7 +4,7 @@
 	 */
 
 
-package Zmartasweden.Zmartasweden;
+package Pageobject;
 
 import java.io.IOException;
 
@@ -15,9 +15,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 //import com.sun.org.apache.bcel.internal.generic.Select;
 
+import ReadExcel.Test_data;
 //import ReadExcel.Test_data;
-import ReadExcel. Excel_Data;
-
+//import ReadExcel.Test_data;
+//import ReadExcel.Test_data;
 import jxl.read.biff.BiffException;
 
 
@@ -130,13 +131,14 @@ public class Locators {
 	{
 	
 		 //Reading Excel  
-	//	Excel_Data read  = new Excel_Data();    
+	   
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(3000);
-		//driver.findElement(amount).sendKeys(read.readData(0, 1));
-		driver.findElement(amount).sendKeys("5000");
+		 Test_data  read  = new   Test_data("Zmarta.xls", "Main Applicant");
+        driver.findElement(amount).sendKeys(read.readData(0, 1));
+		//driver.findElement(amount).sendKeys("5000");
 		Thread.sleep(3000);
 		new Select (driver.findElement(years)).selectByVisibleText("14 år");
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -152,9 +154,9 @@ public class Locators {
 	
 	{
 		//ReadExcel
-	//	Test_data  read = new    Test_data ("Zmarta.xls", "Main Applicant");
-		driver.findElement(ssn).sendKeys("620701-5469");
-		//driver.findElement(ssn).sendKeys(read.readData(1,1));
+		Test_data  read  = new  Test_data("Zmarta.xls", "Main Applicant");
+		//driver.findElement(ssn).sendKeys("620701-5469");
+		driver.findElement(ssn).sendKeys(read.readData(2,1));
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
@@ -341,8 +343,5 @@ public class Locators {
 		}
 
 	 }
-	 
-	 
-	 
 	 
 	 

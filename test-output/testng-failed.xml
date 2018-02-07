@@ -5,10 +5,12 @@
     <classes>
       <class name="Zmartasweden.Zmartasweden.Zmarta_se">
         <methods>
+          <include name="VerifyLoan"/>
+          <include name="VerifyPageTitle"/>
           <include name="VerifyFinalLoan"/>
           <include name="VerifyEmploymentInfo"/>
-          <include name="VerifyMaritalstatus"/>
           <include name="VerifyPersonalInfo"/>
+          <include name="VerifyMaritalstatus"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
         </methods>

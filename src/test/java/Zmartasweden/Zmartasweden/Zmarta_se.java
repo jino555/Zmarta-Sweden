@@ -23,10 +23,13 @@
  *
  *****************************************************************************
  *
- */package Zmartasweden.Zmartasweden;
+ */
+
+package Zmartasweden.Zmartasweden;
 
 import org.testng.annotations.Test;
 
+import Pageobject.Locators;
 import jxl.read.biff.BiffException;
 
 
@@ -43,12 +46,12 @@ import org.testng.annotations.AfterTest;
 public class Zmarta_se {
 	
 	
-public static  WebDriver driver;
+WebDriver driver;
 
 
 
  @BeforeTest
-  public static void beforeTest() {
+  public  void beforeTest() {
 	 
 	 System.setProperty("webdriver.chromedriver" ,"E://chromedriver.exe");
 	 driver = new ChromeDriver();
@@ -62,8 +65,9 @@ public static  WebDriver driver;
 
   
  @Test(priority=0,description ="This Test Case is to Verify the Landing page of the Website")
- 
-public static void VerifyPageTitle()
+
+public  void VerifyPageTitle()
+
 {
 	  Locators title = new Locators(driver);
 	  title.Pagetitle();
@@ -72,8 +76,9 @@ public static void VerifyPageTitle()
 	}
  
  
-  @Test(priority=1,description = " This Test Case  is to Verify the Applicant Loan Information")
-  public static void VerifyLoan() throws Exception {
+  @Test(priority=1,description = " This Test Case  is to Verify the Applicant Loan Information",dependsOnMethods= "VerifyPageTitle")
+ 
+  public  void VerifyLoan() throws Exception {
   
    	   
 		  Locators loan = new Locators(driver);
@@ -83,8 +88,9 @@ public static void VerifyPageTitle()
  
   
   
-  @Test(priority=2,description =" This Test Case   is to Verify the Applicant Personal Information ")
-  public static  void VerifyPersonalInfo() throws Exception
+  @Test(priority=2,description =" This Test Case   is to Verify the Applicant Personal Information ",dependsOnMethods= "VerifyLoan")
+  
+  public   void VerifyPersonalInfo() throws Exception
   {
 	  
 	  Locators info = new Locators(driver);
@@ -92,8 +98,9 @@ public static void VerifyPageTitle()
   }
   
   
-  @Test(priority=3,description = "  This Test Case is to Verify  the Applicant  Marital status ")
-  public static void 	VerifyMaritalstatus() throws InterruptedException, BiffException, IOException
+  @Test(priority=3,description = "  This Test Case is to Verify  the Applicant  Marital status ",dependsOnMethods= "VerifyPersonalInfo")
+  
+  public void 	VerifyMaritalstatus() throws InterruptedException, BiffException, IOException
   {
 	  
 	  Locators info1 = new Locators(driver);
@@ -103,7 +110,8 @@ public static void VerifyPageTitle()
   
   
 
- @Test(priority=4,description ="This Test Case is to Verify the Applicant Employment Information")
+ @Test(priority=4,description ="This Test Case is to Verify the Applicant Employment Information",dependsOnMethods= "VerifyMaritalstatus")
+ 
  public void VerifyEmploymentInfo() throws InterruptedException
  {
 	 Locators employment = new Locators(driver);
@@ -112,7 +120,7 @@ public static void VerifyPageTitle()
  }
  
  
- @Test(priority=5,description ="This Test Case is to  Verify  the Applicant Final Loan Information")
+ @Test(priority=5,description ="This Test Case is to  Verify  the Applicant Final Loan Information",dependsOnMethods= "VerifyEmploymentInfo")
  
  public void VerifyFinalLoan() throws InterruptedException
  {
