@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Jino\AppData\Local\Temp\testng-eclipse-2033475680\testng-customsuite.xml</span>
+                    <span>C:\Users\Jino\AppData\Local\Temp\testng-eclipse-1457325313\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,  3 skipped,  2 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,  4 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Zmartasweden.Zmartasweden.Zmarta_se" hash-for-method="VerifyPersonalInfo">VerifyPersonalInfo</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Zmartasweden.Zmartasweden.Zmarta_se" hash-for-method="VerifyLoan">VerifyLoan</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -129,6 +129,11 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Zmartasweden.Zmartasweden.Zmarta_se" hash-for-method="VerifyMaritalstatus">VerifyMaritalstatus</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Zmartasweden.Zmartasweden.Zmarta_se" hash-for-method="VerifyPersonalInfo">VerifyPersonalInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content skipped suite-Default_suite -->
                   </li>
                   <li>
@@ -138,11 +143,6 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Zmartasweden.Zmartasweden.Zmarta_se" hash-for-method="VerifyLoan">VerifyLoan</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Zmartasweden.Zmartasweden.Zmarta_se" hash-for-method="VerifyPageTitle">VerifyPageTitle</a> <!-- method navigator-link -->
@@ -168,38 +168,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifyPersonalInfo">
-                  </a> <!-- VerifyPersonalInfo -->
-                  <span class="method-name">VerifyPersonalInfo</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;msg&apos;]/div/a&quot;}
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:14.666Z&apos;
-System info: host: &apos;LAPTOP-L45CF4AI&apos;, ip: &apos;172.16.16.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Jino\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.132, webStorageEnabled: true}
-Session ID: b0c97e77ce77ea15c754fe6af215bd8b
-*** Element info: {Using=xpath, value=//div[@id=&apos;msg&apos;]/div/a}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at Pageobject.Locators.PersonalInfo(Locators.java:173)
-	at Zmartasweden.Zmartasweden.Zmarta_se.VerifyPersonalInfo(Zmarta_se.java:97)
+                  <a name="VerifyLoan">
+                  </a> <!-- VerifyLoan -->
+                  <span class="method-name">VerifyLoan</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at ReadExcel.Excel_Data.readData(Excel_Data.java:24)
+	at Pageobject.Locators.ApplyLoan(Locators.java:138)
+	at Zmartasweden.Zmartasweden.Zmarta_se.VerifyLoan(Zmarta_se.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -228,7 +203,7 @@ Session ID: b0c97e77ce77ea15c754fe6af215bd8b
 
 </div> <!-- stack-trace -->
                   <em>
-( This Test Case   is to Verify the Applicant Personal Information )                  </em>
+( This Test Case  is to Verify the Applicant Loan Information)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -244,7 +219,7 @@ Session ID: b0c97e77ce77ea15c754fe6af215bd8b
                   <a name="VerifyEmploymentInfo">
                   </a> <!-- VerifyEmploymentInfo -->
                   <span class="method-name">VerifyEmploymentInfo</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Zmarta_se.VerifyEmploymentInfo()[pri:4, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04] depends on not successfully finished methods
+                  <div class="stack-trace">java.lang.Throwable: Method Zmarta_se.VerifyEmploymentInfo()[pri:4, instance:Zmartasweden.Zmartasweden.Zmarta_se@31ef45e3] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:878)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -274,7 +249,7 @@ Session ID: b0c97e77ce77ea15c754fe6af215bd8b
                   <a name="VerifyFinalLoan">
                   </a> <!-- VerifyFinalLoan -->
                   <span class="method-name">VerifyFinalLoan</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Zmarta_se.VerifyFinalLoan()[pri:5, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04] depends on not successfully finished methods
+                  <div class="stack-trace">java.lang.Throwable: Method Zmarta_se.VerifyFinalLoan()[pri:5, instance:Zmartasweden.Zmartasweden.Zmarta_se@31ef45e3] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:878)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -304,7 +279,7 @@ Session ID: b0c97e77ce77ea15c754fe6af215bd8b
                   <a name="VerifyMaritalstatus">
                   </a> <!-- VerifyMaritalstatus -->
                   <span class="method-name">VerifyMaritalstatus</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Zmarta_se.VerifyMaritalstatus()[pri:3, instance:Zmartasweden.Zmartasweden.Zmarta_se@3abbfa04] depends on not successfully finished methods
+                  <div class="stack-trace">java.lang.Throwable: Method Zmarta_se.VerifyMaritalstatus()[pri:3, instance:Zmartasweden.Zmartasweden.Zmarta_se@31ef45e3] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:878)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
@@ -329,6 +304,36 @@ Session ID: b0c97e77ce77ea15c754fe6af215bd8b
 (  This Test Case is to Verify  the Applicant  Marital status )                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyPersonalInfo">
+                  </a> <!-- VerifyPersonalInfo -->
+                  <span class="method-name">VerifyPersonalInfo</span>
+                  <div class="stack-trace">java.lang.Throwable: Method Zmarta_se.VerifyPersonalInfo()[pri:2, instance:Zmartasweden.Zmartasweden.Zmarta_se@31ef45e3] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:878)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                  <em>
+( This Test Case   is to Verify the Applicant Personal Information )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-skipped -->
           <div class="suite-Default_suite-class-passed">
@@ -337,15 +342,6 @@ Session ID: b0c97e77ce77ea15c754fe6af215bd8b
               <span class="class-name">Zmartasweden.Zmartasweden.Zmarta_se</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyLoan">
-                  </a> <!-- VerifyLoan -->
-                  <span class="method-name">VerifyLoan</span>
-                  <em>
-( This Test Case  is to Verify the Applicant Loan Information)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="VerifyPageTitle">
@@ -360,7 +356,7 @@ Session ID: b0c97e77ce77ea15c754fe6af215bd8b
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Jino\AppData\Local\Temp\testng-eclipse-2033475680\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Jino\AppData\Local\Temp\testng-eclipse-1457325313\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -413,32 +409,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyLoan')
 data.setCell(0, 2, 'Zmartasweden.Zmartasweden.Zmarta_se')
-data.setCell(0, 3, 13733);
+data.setCell(0, 3, 8057);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'VerifyPersonalInfo')
+data.setCell(1, 1, 'VerifyPageTitle')
 data.setCell(1, 2, 'Zmartasweden.Zmartasweden.Zmarta_se')
-data.setCell(1, 3, 11565);
+data.setCell(1, 3, 23);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'VerifyPageTitle')
+data.setCell(2, 1, 'VerifyEmploymentInfo')
 data.setCell(2, 2, 'Zmartasweden.Zmartasweden.Zmarta_se')
-data.setCell(2, 3, 98);
+data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'VerifyFinalLoan')
+data.setCell(3, 1, 'VerifyPersonalInfo')
 data.setCell(3, 2, 'Zmartasweden.Zmartasweden.Zmarta_se')
 data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'VerifyEmploymentInfo')
+data.setCell(4, 1, 'VerifyMaritalstatus')
 data.setCell(4, 2, 'Zmartasweden.Zmartasweden.Zmarta_se')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'VerifyMaritalstatus')
+data.setCell(5, 1, 'VerifyFinalLoan')
 data.setCell(5, 2, 'Zmartasweden.Zmartasweden.Zmarta_se')
 data.setCell(5, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -471,21 +467,17 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">VerifyPageTitle</span>
-                <span class="method-start">21924 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">VerifyLoan</span>
-                <span class="method-start">22027 ms</span>
+                <span class="method-start">19391 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">VerifyPersonalInfo</span>
-                <span class="method-start">35762 ms</span>
+                <span class="method-name">VerifyLoan</span>
+                <span class="method-start">19422 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">47362 ms</span>
+                <span class="method-start">27495 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

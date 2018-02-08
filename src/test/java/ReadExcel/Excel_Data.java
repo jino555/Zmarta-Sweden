@@ -1,41 +1,30 @@
 package ReadExcel;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
 public class Excel_Data {
-	public  File inputWorkbook;
-	public Sheet sheet;
+    HSSFWorkbook  wb;
+    HSSFSheet sheet1;
+    public Excel_Data(String fileName,String sheetName) throws Exception {
+        File src= new File("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
+        FileInputStream  fis = new FileInputStream(src);
+        HSSFWorkbook wb = new HSSFWorkbook(fis);
+    }
 
-	public Excel_Data(String fileName,String sheetName) throws BiffException, IOException
-	{
-		File src = new File("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
-		 Workbook w= Workbook.getWorkbook(inputWorkbook);
-	      inputWorkbook.getAbsoluteFile();
-	       sheet=w.getSheet(sheetName);
-	      
-	       
-	}
-	
-	
-	public  String readData(int i,int j) throws BiffException, IOException {
-		
+    public  String  readData( int  sheetNumber, int row,int column) { 
+        HSSFSheet sheet1 =wb.getSheetAt(0);
+        String data =sheet1.getRow(row).getCell(column).getStringCellValue();
+        return  data;
+    }
 
-      
-      Cell cell=sheet.getCell(i,j);
-      //Cell cell1=sheet1.getCell(i,j);
-     
-return cell.getContents();
-      
-         
-         
-
-
-      }
 	
 }
