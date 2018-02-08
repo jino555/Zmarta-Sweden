@@ -55,7 +55,7 @@ WebDriver driver;
 	 
 	 System.setProperty("webdriver.chromedriver" ,"E://chromedriver.exe");
 	 driver = new ChromeDriver();
-	 String baseurl = "https://test.zmarta.se/lana-pengar";
+	 String baseurl = "https://test.zmartan./lana-pengar";
 	 driver.get(baseurl);
 	 driver.manage().window().maximize();
 	 System.out.println("Browser Started");
