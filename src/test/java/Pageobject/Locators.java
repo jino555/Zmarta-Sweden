@@ -130,12 +130,12 @@ public class Locators {
 	{
 	
 		 //Reading Excel  
-		Excel_Data read = new  Excel_Data("Zmarta.xls","Co-Applicant" );
+		 Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
-		driver.findElement(amount).sendKeys(read.readData(0, 1, 2));
+		driver.findElement(amount).sendKeys(read.getData(1, 2, 1));
 		Thread.sleep(3000);
 		new Select (driver.findElement(years)).selectByVisibleText("14 år");
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
