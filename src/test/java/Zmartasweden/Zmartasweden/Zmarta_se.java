@@ -30,7 +30,7 @@ package Zmartasweden.Zmartasweden;
 import org.testng.annotations.Test;
 
 import Pageobject.Locators;
-import jxl.read.biff.BiffException;
+
 
 
 
@@ -84,6 +84,7 @@ public  void VerifyPageTitle()
 		  Locators loan = new Locators(driver);
 		  loan.ApplyLoan();
 	  }
+  
 
  
   
@@ -100,7 +101,7 @@ public  void VerifyPageTitle()
   
   @Test(priority=3,description = "  This Test Case is to Verify  the Applicant  Marital status ",dependsOnMethods= "VerifyPersonalInfo")
   
-  public void 	VerifyMaritalstatus() throws InterruptedException, BiffException, IOException
+  public void 	VerifyMaritalstatus() throws Exception
   {
 	  
 	  Locators info1 = new Locators(driver);

@@ -14,12 +14,13 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+
 //import com.sun.org.apache.bcel.internal.generic.Select;
 
 //import ReadExcel.Test_data;
 import ReadExcel.Excel_Data;
-import jxl.Sheet;
-import jxl.read.biff.BiffException;
+
 
 
 public class Locators {
@@ -42,7 +43,7 @@ public class Locators {
 	By email = By.name("email");
 	By mob = By.name("telNr");
 	By add = By.xpath("//div[4]/div/a");
-	By cossn = By.name("CopNo");
+	By cossn = By.id("CopNo");
 	By coemail =By.name("Coemail");
 	By comob =By.name("CotelNr");
 	By approve = By.xpath("//div[@id='approveTermsStep1']/div/label/span");
@@ -107,7 +108,9 @@ public class Locators {
 	}
 	
 	
+	
 	//Verify Page Title
+	 
 	public void Pagetitle()
 	
 	{
@@ -130,14 +133,14 @@ public class Locators {
 	{
 	
 		 //Reading Excel  
-		 Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
+		Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
-		driver.findElement(amount).sendKeys(read.getData(1, 2, 1));
-		Thread.sleep(3000);
-		new Select (driver.findElement(years)).selectByVisibleText("14 år");
+		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
+		Thread.sleep(5000);
+		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)", "");
 		driver.findElement(next).click();
@@ -149,14 +152,14 @@ public class Locators {
 	
 	public void PersonalInfo() throws Exception
 	
-	{
-		
-		driver.findElement(ssn).sendKeys("620701-5469");
+{
+		Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
+		driver.findElement(ssn).sendKeys(read.getData(0, 1, 2));
 		driver.findElement(email).sendKeys("test@gmail.com");
 		driver.findElement(mob).sendKeys("9745754904");
 		Thread.sleep(3000);
 		driver.findElement(add).click();
-		driver.findElement(cossn).sendKeys("450805-9534");
+	   driver.findElement(cossn).sendKeys(read.getData(0, 2, 2));
 		driver.findElement(coemail).sendKeys("qa1@gmail.com");
 		driver.findElement(comob).sendKeys("9747835332");
 		Thread.sleep(3000);
@@ -168,7 +171,7 @@ public class Locators {
 		driver.findElement(close).click();
 		System.out.println("Applicant Personal Information is Verfied");
 		
-		
+	
 		
 	}
 	
@@ -176,11 +179,11 @@ public class Locators {
 	
 	// Marital Status
 	
-	public void Maritalstatus() throws InterruptedException, BiffException, IOException 
+	public void Maritalstatus() throws Exception 
 	
 	
 	 {  
-		    // Test_data read=new Test_data("Zmarta.xls", "Main Applicant");    
+		    
 			Thread.sleep(5000);
 			driver.findElement(coapplicantlivingyes).click();
 			new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");

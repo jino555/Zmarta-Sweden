@@ -21,6 +21,9 @@
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/client-combined-3.8.1.jar"/>
 	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/client-combined-3.8.1-sources.jar"/>
+	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/maven-compiler-plugin-2.4.jar"/>
+	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/maven-surefire-plugin-2.7.1.jar"/>
+	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/testng-6.8.jar"/>
 	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Apache poi/poi-3.17/commons-codec-1.10.jar"/>
 	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Apache poi/poi-3.17/commons-collections4-4.1.jar"/>
 	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Apache poi/poi-3.17/commons-logging-1.2.jar"/>
@@ -34,9 +37,5 @@
 	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Apache poi/poi-3.17/poi-ooxml-schemas-3.17.jar"/>
 	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Apache poi/poi-3.17/poi-scratchpad-3.17.jar"/>
 	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Apache poi/poi-3.17/xmlbeans-2.6.0.jar"/>
-	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/jxl-2.6.jar"/>
-	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/maven-compiler-plugin-2.4.jar"/>
-	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/maven-surefire-plugin-2.7.1.jar"/>
-	<classpathentry kind="lib" path="E:/Jino_testing/Test Automation/Selenium/Selenium drivers/selenium 3.8.1/testng-6.8.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
