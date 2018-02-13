@@ -155,8 +155,8 @@ public class Locators {
 {
 		Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
 		driver.findElement(ssn).sendKeys(read.getData(0, 1, 2));
-		driver.findElement(email).sendKeys("test@gmail.com");
-		driver.findElement(mob).sendKeys("9745754904");
+		driver.findElement(email).sendKeys(read.getData(0, 1, 3));
+		driver.findElement(mob).sendKeys(read.getData(0, 1, 4));
 		Thread.sleep(3000);
 		driver.findElement(add).click();
 	   driver.findElement(cossn).sendKeys(read.getData(1, 2, 2));
