@@ -159,7 +159,7 @@ public class Locators {
 		driver.findElement(mob).sendKeys(read.getData(0, 1, 4));
 		Thread.sleep(3000);
 		driver.findElement(add).click();
-	   driver.findElement(cossn).sendKeys(read.getData(1, 2, 2));
+	   driver.findElement(cossn).sendKeys(read.getData(0, 2, 2));
 		driver.findElement(coemail).sendKeys("qa1@gmail.com");
 		driver.findElement(comob).sendKeys("9747835332");
 		Thread.sleep(3000);
