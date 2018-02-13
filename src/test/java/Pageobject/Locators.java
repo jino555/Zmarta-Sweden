@@ -133,11 +133,14 @@ public class Locators {
 	{
 	
 		 //Reading Excel  
+	
 		Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
+		String currentURL = "https://test.zmarta.se/lana-pengar/samla-lan/ansok";
+		 Assert.assertTrue(currentURL.contains("54dfd"));
 		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		Thread.sleep(5000);
 		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
@@ -145,7 +148,8 @@ public class Locators {
 		jse.executeScript("window.scrollBy(0,250)", "");
 		driver.findElement(next).click();
 		System.out.println("Applicant Loan is Verfiied" );
-	
+		
+	 
 	}
 	
 //Personal Information
@@ -159,7 +163,7 @@ public class Locators {
 		driver.findElement(mob).sendKeys(read.getData(0, 1, 4));
 		Thread.sleep(3000);
 		driver.findElement(add).click();
-	   driver.findElement(cossn).sendKeys(read.getData(0, 2, 2));
+	   driver.findElement(cossn).sendKeys(read.getData(1, 2, 2));
 		driver.findElement(coemail).sendKeys("qa1@gmail.com");
 		driver.findElement(comob).sendKeys("9747835332");
 		Thread.sleep(3000);
