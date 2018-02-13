@@ -140,7 +140,7 @@ public class Locators {
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
 		String currentURL = "https://test.zmarta.se/lana-pengar/samla-lan/ansok";
-		 Assert.assertTrue(currentURL.contains("54dfd"));
+		 Assert.assertTrue(currentURL.contains("/s"));
 		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		Thread.sleep(5000);
 		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
@@ -163,7 +163,8 @@ public class Locators {
 		driver.findElement(mob).sendKeys(read.getData(0, 1, 4));
 		Thread.sleep(3000);
 		driver.findElement(add).click();
-	   driver.findElement(cossn).sendKeys(read.getData(1, 2, 2));
+		 System.out.println(read.getData(1, 1, 0));
+	   driver.findElement(cossn).sendKeys(read.getData(0, 1, 0));
 		driver.findElement(coemail).sendKeys("qa1@gmail.com");
 		driver.findElement(comob).sendKeys("9747835332");
 		Thread.sleep(3000);
