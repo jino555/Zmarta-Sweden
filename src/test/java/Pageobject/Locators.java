@@ -139,8 +139,8 @@ public class Locators {
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
-		String currentURL = "https://test.zmarta.se/lana-pengar/samla-lan/ansok";
-		 Assert.assertTrue(currentURL.contains("/s"));
+		String currentURL = driver.getCurrentUrl();
+		 Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
 		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		Thread.sleep(5000);
 		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
@@ -157,6 +157,7 @@ public class Locators {
 	public void PersonalInfo() throws Exception
 	
 {
+		
 		Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
 		driver.findElement(ssn).sendKeys(read.getData(0, 1, 2));
 		driver.findElement(email).sendKeys(read.getData(0, 1, 3));
