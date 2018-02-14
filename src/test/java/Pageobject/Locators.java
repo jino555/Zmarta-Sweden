@@ -54,7 +54,6 @@ public class Locators {
 	
 	By coapplicantlivingyes  =By.xpath("//*[@class='btn-common'] ");
 	By maritalstatus = By.xpath("//*[@name='maritalStatus']");
-	//By maritalstatus = By.xpath("//div[3]/div/div/div/select");
 	By children = By.name("nrOfChildren");
 	By residence =By.name("residenceType");
 	By rent =By.name("rent");
@@ -134,13 +133,13 @@ public class Locators {
 	
 		 //Reading Excel  
 	
-		Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
+	     Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
 		Thread.sleep(3000);
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
 		String currentURL = driver.getCurrentUrl();
-		 Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
+		  Assert.assertTrue(currentURL.contentEquals("https://test.zmarta.se/lana-pengar/samla-lan/ansok"));
 		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		Thread.sleep(5000);
 		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
@@ -154,9 +153,16 @@ public class Locators {
 	
 //Personal Information
 	
-	public void PersonalInfo() throws Exception
-	
-{
+	public void PersonalInfo() throws Exception{
+  	
+		if(driver.getPageSource().contains("1068"))
+		{
+		System.out.println("Current Page is loaded correctly");
+		}
+		else
+		{
+		System.out.println("Current Page is not  loaded correctly");
+		}
 		
 		Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
 		driver.findElement(ssn).sendKeys(read.getData(0, 1, 2));
@@ -164,8 +170,7 @@ public class Locators {
 		driver.findElement(mob).sendKeys(read.getData(0, 1, 4));
 		Thread.sleep(3000);
 		driver.findElement(add).click();
-		 System.out.println(read.getData(1, 1, 0));
-	   driver.findElement(cossn).sendKeys(read.getData(0, 1, 0));
+	   driver.findElement(cossn).sendKeys(read.getData(0, 2, 2));
 		driver.findElement(coemail).sendKeys("qa1@gmail.com");
 		driver.findElement(comob).sendKeys("9747835332");
 		Thread.sleep(3000);
@@ -185,11 +190,11 @@ public class Locators {
 	
 	// Marital Status
 	
-	public void Maritalstatus() throws Exception 
-	
-	
-	 {  
-		    
+	public void Maritalstatus() throws Exception{
+			
+			String text = driver.getPageSource();
+			Assert.assertTrue(text.contains("bouppgifter"));
+			System.out.println("Marital Page is Loaded");
 			Thread.sleep(5000);
 			driver.findElement(coapplicantlivingyes).click();
 			new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
