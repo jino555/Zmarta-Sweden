@@ -9,22 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num attn">2</td><td class="num attn">1</td><td class="num">51,202</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num attn">3</td><td class="num attn">1</td><td class="num">40,401</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m0">VerifyMaritalstatus</a></td><td rowspan="1">1518600264662</td><td rowspan="1">5434</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m1">VerifyEmploymentInfo</a></td><td rowspan="1">1518600270111</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">VerifyFinalLoan</a></td><td rowspan="1">1518600270113</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m3">VerifyLoan</a></td><td rowspan="1">1518600234283</td><td rowspan="1">18730</td></tr><tr class="passedeven"><td><a href="#m4">VerifyPageTitle</a></td><td rowspan="1">1518600234215</td><td rowspan="1">62</td></tr><tr class="passedeven"><td><a href="#m5">VerifyPersonalInfo</a></td><td rowspan="1">1518600253014</td><td rowspan="1">11645</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m0">VerifyPersonalInfo</a></td><td rowspan="1">1518615322581</td><td rowspan="1">11925</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m1">VerifyEmploymentInfo</a></td><td rowspan="1">1518615334555</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">VerifyFinalLoan</a></td><td rowspan="1">1518615334563</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">VerifyMaritalstatus</a></td><td rowspan="1">1518615334547</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Zmartasweden.Zmartasweden.Zmarta_se</td><td><a href="#m4">VerifyLoan</a></td><td rowspan="1">1518615307865</td><td rowspan="1">14714</td></tr><tr class="passedeven"><td><a href="#m5">VerifyPageTitle</a></td><td rowspan="1">1518615307741</td><td rowspan="1">118</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Zmartasweden.Zmartasweden.Zmarta_se#VerifyMaritalstatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //*[@name=&apos;maritalStatus&apos;]oo because of the following error:
-SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//*[@name=&apos;maritalStatus&apos;]oo&apos; is not a valid XPath expression.
+<h2>Default test</h2><h3 id="m0">Zmartasweden.Zmartasweden.Zmarta_se#VerifyPersonalInfo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;msg&apos;]/div/a&quot;}
   (Session info: chrome=64.0.3282.140)
   (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:14.666Z&apos;
 System info: host: &apos;LAPTOP-L45CF4AI&apos;, ip: &apos;172.16.16.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522940 (1a76f96f66e3ca..., userDataDir: C:\Users\Jino\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.140, webStorageEnabled: true}
-Session ID: 5bdd9cbdafd61789e93c5c14c7eb305d
-*** Element info: {Using=xpath, value=//*[@name=&apos;maritalStatus&apos;]oo}
+Session ID: e48d85b0ec05f9ce5603ff6335d09025
+*** Element info: {Using=xpath, value=//div[@id=&apos;msg&apos;]/div/a}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -41,8 +40,8 @@ Session ID: 5bdd9cbdafd61789e93c5c14c7eb305d
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at Pageobject.Locators.Maritalstatus(Locators.java:200)
-	at Zmartasweden.Zmartasweden.Zmarta_se.VerifyMaritalstatus(Zmarta_se.java:108)
+	at Pageobject.Locators.PersonalInfo(Locators.java:184)
+	at Zmartasweden.Zmartasweden.Zmarta_se.VerifyPersonalInfo(Zmarta_se.java:98)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -109,8 +108,27 @@ Session ID: 5bdd9cbdafd61789e93c5c14c7eb305d
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Zmartasweden.Zmartasweden.Zmarta_se#VerifyLoan</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">Zmartasweden.Zmartasweden.Zmarta_se#VerifyPageTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">Zmartasweden.Zmartasweden.Zmarta_se#VerifyPersonalInfo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Zmartasweden.Zmartasweden.Zmarta_se#VerifyMaritalstatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method Zmarta_se.VerifyMaritalstatus()[pri:3, instance:Zmartasweden.Zmartasweden.Zmarta_se@239963d8] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:878)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Zmartasweden.Zmartasweden.Zmarta_se#VerifyLoan</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Zmartasweden.Zmartasweden.Zmarta_se#VerifyPageTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

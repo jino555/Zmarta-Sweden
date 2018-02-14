@@ -138,8 +138,10 @@ public class Locators {
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
+		
 		String currentURL = driver.getCurrentUrl();
 		  Assert.assertTrue(currentURL.contentEquals("https://test.zmarta.se/lana-pengar/samla-lan/ansok"));
+		  System.out.println("Loan page is loaded correctly");
 		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		Thread.sleep(5000);
 		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
@@ -157,11 +159,11 @@ public class Locators {
   	
 		if(driver.getPageSource().contains("1068"))
 		{
-		System.out.println("Current Page is loaded correctly");
+		System.out.println("PersonalInfo Page is loaded correctly");
 		}
 		else
 		{
-		System.out.println("Current Page is not  loaded correctly");
+		System.out.println("PersonalInfoPage is not  loaded correctly");
 		}
 		
 		Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
@@ -249,8 +251,9 @@ public class Locators {
 	
 	 public void EmploymentInfo() throws InterruptedException
 	 
-	 
-	 {
+	  {
+		 Assert.assertTrue(driver.findElement(employment).isDisplayed(), "hi");
+		 
 		for (int i=1;i<=4;i++)
 			
 		{
