@@ -138,9 +138,9 @@ public class Locators {
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
-		
+
 		String currentURL = driver.getCurrentUrl();
-		  Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
+		Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
 		  System.out.println("Loan page is loaded correctly");
 		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		Thread.sleep(5000);
@@ -173,8 +173,8 @@ public class Locators {
 		Thread.sleep(3000);
 		driver.findElement(add).click();
 		driver.findElement(cossn).sendKeys(read.getData(1, 1, 0));
-		driver.findElement(coemail).sendKeys("aami@gmail.com");
-		driver.findElement(comob).sendKeys("9134564433");
+		driver.findElement(coemail).sendKeys("aaewemi@gmail.com");
+		driver.findElement(comob).sendKeys("9122564433");
 		Thread.sleep(3000);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)", "");
@@ -195,7 +195,7 @@ public class Locators {
 	public void Maritalstatus() throws Exception{
 			
 			String text = driver.getPageSource();
-			Assert.assertTrue(text.contains("bouppgifterweeee"));
+			Assert.assertTrue(text.contains("bouppgifter"));
 			System.out.println("Marital Page is Loaded correctly");
 			Thread.sleep(5000);
 			driver.findElement(coapplicantlivingyes).click();
@@ -252,7 +252,8 @@ public class Locators {
 	 public void EmploymentInfo() throws InterruptedException
 	 
 	  {
-		 Assert.assertTrue(driver.findElement(employment).isDisplayed(), "hi");
+		 Assert.assertTrue(driver.findElement(employment).isDisplayed(), "Employment Page is not loaded");
+		 System.out.println("Employment Page is  loaded correctly");
 		 
 		for (int i=1;i<=4;i++)
 			
@@ -316,7 +317,11 @@ public class Locators {
 	 
 	 //Final Loan
 	 
+	 
 	 public void FinalLoan() throws InterruptedException  {
+		 
+		 Assert.assertTrue(driver.findElement(loanpurpose).isDisplayed(), "Final Loan page is not loaded");
+		 System.out.println("Final Loan page is loaded correctly ");
 	
 		for (int i=0;i<=1;i++)
 	 {
