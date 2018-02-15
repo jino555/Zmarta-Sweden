@@ -138,11 +138,10 @@ public class Locators {
 		driver.findElement(apply).click();
 		driver.findElement(loan).click();
 		Thread.sleep(2000);
-
-		String currentURL = driver.getCurrentUrl();
-		Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
-		  System.out.println("Loan page is loaded correctly");
-		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
+      String currentURL = driver.getCurrentUrl();
+	  Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
+		System.out.println("Loan page is loaded correctly");
+		 driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		Thread.sleep(5000);
 		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -252,7 +251,8 @@ public class Locators {
 	 public void EmploymentInfo() throws InterruptedException
 	 
 	  {
-		 Assert.assertTrue(driver.findElement(employment).isDisplayed(), "Employment Page is not loaded");
+		 String title = driver.getTitle();
+		  Assert.assertTrue(title.contains("Employment"));
 		 System.out.println("Employment Page is  loaded correctly");
 		 
 		for (int i=1;i<=4;i++)
