@@ -118,7 +118,7 @@ public class Locators {
 	  System.out.println("Title is " +actual_title);
 	  
 	  //Expected result
-	  String expected_title= "Låna pengar på nätet till låg ränta på Zmarta.se";
+	  String expected_title= "Jämför Lån & Hitta det Billigaste Lånet på Zmarta.se";
 	  Assert.assertEquals(   actual_title,   expected_title  );
 	  System.out.println("Page title Verfied and Welcome to Zmarta Landing Page ");
 	  
@@ -140,7 +140,7 @@ public class Locators {
 		Thread.sleep(2000);
 		
 		String currentURL = driver.getCurrentUrl();
-		  Assert.assertTrue(currentURL.contentEquals("https://test.zmarta.se/lana-pengar/samla-lan/ansok"));
+		  Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
 		  System.out.println("Loan page is loaded correctly");
 		driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		Thread.sleep(5000);
@@ -172,9 +172,9 @@ public class Locators {
 		driver.findElement(mob).sendKeys(read.getData(0, 1, 4));
 		Thread.sleep(3000);
 		driver.findElement(add).click();
-	   driver.findElement(cossn).sendKeys(read.getData(0, 2, 2));
-		driver.findElement(coemail).sendKeys("qa1@gmail.com");
-		driver.findElement(comob).sendKeys("9747835332");
+		driver.findElement(cossn).sendKeys(read.getData(1, 1, 0));
+		driver.findElement(coemail).sendKeys("aami@gmail.com");
+		driver.findElement(comob).sendKeys("9134564433");
 		Thread.sleep(3000);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)", "");
@@ -195,8 +195,8 @@ public class Locators {
 	public void Maritalstatus() throws Exception{
 			
 			String text = driver.getPageSource();
-			Assert.assertTrue(text.contains("bouppgifter"));
-			System.out.println("Marital Page is Loaded");
+			Assert.assertTrue(text.contains("bouppgifterweeee"));
+			System.out.println("Marital Page is Loaded correctly");
 			Thread.sleep(5000);
 			driver.findElement(coapplicantlivingyes).click();
 			new Select(driver.findElement(maritalstatus)).selectByVisibleText("Gift/Partnerskap");
