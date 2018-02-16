@@ -7,11 +7,13 @@
 package Pageobject;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
@@ -34,7 +36,7 @@ public class Locators {
 	By loan = By.xpath("//a[contains(text(),'Samla dina lån')]");
 	By amount =By.name("loanAmount");
 	By years = By.name("paymentYears");
-	By next = By.xpath("//form[@id='application']/div[6]/div/div[2]/button");
+    By next =By.xpath("//*[@class='button blue filled']");
 	
 
 	//Personal Information
@@ -119,7 +121,7 @@ public class Locators {
 	  
 	  //Expected result
 	  String expected_title= "Jämför Lån & Hitta det Billigaste Lånet på Zmarta.se";
-	  Assert.assertEquals(   actual_title,   expected_title  );
+	  Assert.assertEquals(   actual_title,   expected_title , "Page Title is not valid" );
 	  System.out.println("Page title Verfied and Welcome to Zmarta Landing Page ");
 	  
 }
@@ -134,16 +136,16 @@ public class Locators {
 		 //Reading Excel  
 	
 	     Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
-		Thread.sleep(3000);
+		
 		driver.findElement(apply).click();
-		driver.findElement(loan).click();
-		Thread.sleep(2000);
-      String currentURL = driver.getCurrentUrl();
-	  Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
+		driver.findElement(loan).click();		
+		 String currentURL = driver.getCurrentUrl();
+	      Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
 		System.out.println("Loan page is loaded correctly");
+		 Thread.sleep(3000);
 		 driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
-		Thread.sleep(5000);
 		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
+	     Thread.sleep(3000);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)", "");
 		driver.findElement(next).click();

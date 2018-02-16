@@ -139,6 +139,7 @@ public  void VerifyPageTitle()
   public void afterTest() {
 	  
 	System.out.println("Browser End");  
+	driver.close();
   }
 
 }
