@@ -116,10 +116,12 @@ public class Locators {
 	
 	{
 		//Actual result
+		
 		String  actual_title = driver.getTitle();
 	  System.out.println("Title is " +actual_title);
 	  
 	  //Expected result
+	  
 	  String expected_title= "Jämför Lån & Hitta det Billigaste Lånet på Zmarta.se";
 	  Assert.assertEquals(   actual_title,   expected_title , "Page Title is not valid" );
 	  System.out.println("Page title Verfied and Welcome to Zmarta Landing Page ");
