@@ -198,7 +198,7 @@ public class Locators {
 	public void Maritalstatus() throws Exception{
 			
 			String text = driver.getPageSource();
-			Assert.assertTrue(text.contains("bouppgifter"));
+			Assert.assertTrue(text.contains("bouppgifter"), "Marital page is not loaded ");
 			System.out.println("Marital Page is Loaded correctly");
 			Thread.sleep(5000);
 			driver.findElement(coapplicantlivingyes).click();
