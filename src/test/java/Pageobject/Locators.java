@@ -32,8 +32,9 @@ public class Locators {
 	//Loan
 	
 	
-	By apply = By.xpath("(//a[contains(text(),'AnsÃ¶k nu')])[2]");
-	By loan = By.xpath("//a[contains(text(),'Samla dina lÃ¥n')]");
+
+	By apply = By.id("privateLoanTeaserButton");
+	By loan = By.xpath("//a[contains(.,'Samla dina lån')]");
 	By amount =By.name("loanAmount");
 	By years = By.name("paymentYears");
     By next =By.xpath("//*[@class='button blue filled']");
@@ -122,7 +123,7 @@ public class Locators {
 	  
 	  //Expected result
 	  
-	  String expected_title= "JÃ¤mfÃ¶r LÃ¥n & Hitta det Billigaste LÃ¥net pÃ¥ Zmarta.se";
+	  String expected_title= "Jämför lån och hitta det billigaste lånet på zmarta.se | Zmarta";
 	  Assert.assertEquals(   actual_title,   expected_title , "Page Title is not valid" );
 	  System.out.println("Page title Verfied and Welcome to Zmarta Landing Page ");
 	  
@@ -137,15 +138,16 @@ public class Locators {
 	
 		 //Reading Excel  
 	
-	     Excel_Data read = new Excel_Data("E:\\Jino_testing\\Git_Hub\\Zmarta_se\\resources\\Zmarta.xls");
-		
+	   		
 		driver.findElement(apply).click();
-		driver.findElement(loan).click();		
+		//driver.findElement(loan).click();		
 		 String currentURL = driver.getCurrentUrl();
-	      Assert.assertTrue(currentURL.contains("samla-lan/ansok"));
+	      Assert.assertTrue(currentURL.contains("privatlan/ansok/1"));
 		System.out.println("Loan page is loaded correctly");
 		 Thread.sleep(3000);
-		 driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
+		 Excel_Data read = new Excel_Data("E:\\Jino_testing\\Automation_project\\Zmarta_se\\resources\\Zmarta.xls");
+		 driver.findElement(amount).clear();
+	    driver.findElement(amount).sendKeys(read.getData(0, 1, 0));
 		driver.findElement(years).sendKeys(read.getData(0, 1, 1));
 	     Thread.sleep(3000);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
